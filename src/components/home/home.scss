@@ -1,0 +1,305 @@
+#home-component {
+    .right-wolf {
+        height: 400px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .title {
+        font-size: 65px;
+        font-family: 'Lilita One', sans-serif;
+        color: #fff;
+    }
+
+    .sub-title {
+        font-size: 60px;
+        color: #ffe559;
+        font-family: 'Lilita One', sans-serif;
+        margin-top: -15px;
+    }
+
+    .master-container {
+        width: 100% !important;
+        max-width: unset;
+        height: 85vh;
+    }
+
+    .project-titles {
+        padding-top: 20px;
+        padding-left: 50px;
+        text-align: left;
+        align-self: flex-start;
+    }
+
+    .buy-button {
+        width: 180px;
+        padding: 15px;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        display: inline-block;
+        background-color: transparent;
+        border-width: 4px;
+        border-style: solid;
+        text-decoration: none;
+        color: #fff !important;
+        transition: all 0.3s ease-in;
+        position: relative;
+        z-index: 1;
+    }
+
+    .buy-button:before {
+        content: '';
+        width: calc(100% + 8px);
+        opacity: 0;
+        height: calc(100% + 8px);
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        transition: all 0.2s ease-in;
+        z-index: -1;
+    }
+
+    .buy-button:hover:before {
+        opacity: 1;
+        color: #000;
+    }
+
+    .button3 {
+        border-image: linear-gradient(to right, #737373, #ffe559) 1;
+    }
+
+    .button3:before {
+        background: linear-gradient(to right, #737373, #ffe559);
+    }
+
+
+    .about-section {
+        background-color: #b4b4b6;
+        padding-bottom: 60px;
+        padding-top: 30px;
+    }
+
+    .about-title {
+        margin-bottom: 50px;
+        font-size: 55px;
+        font-family: 'Lilita One', sans-serif;
+        text-align: center;
+    }
+
+    .about-text {
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .roadmap-section {
+        background-color: #3a3a3a;
+        padding-bottom: 70px;
+        padding-top: 40px;
+
+        li {
+            padding-bottom: 5px;
+        }
+    }
+
+    .roadmap-title {
+        margin-bottom: 50px;
+        font-size: 55px;
+        font-family: 'Lilita One', sans-serif;
+        text-align: center;
+        color: #ffe559;
+    }
+
+    .roadmap-block {
+        padding: 16px 20px;
+        border: 0.5px solid #ffe559;
+        border-radius: 12px;
+        justify-content: space-between;
+        height: 170px;
+    }
+
+    .block-title {
+        color: #ffe559;
+        font-size: 20px;
+        font-family: 'Lilita One', sans-serif;
+        padding-bottom: 10px;
+    }
+
+    .block-list {
+        color: #fff;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .team-section {
+        background-color: #202124;
+        padding-bottom: 60px;
+        padding-top: 30px;
+    }
+
+    .team-title {
+        margin-bottom: 20px;
+        font-size: 55px;
+        font-family: 'Lilita One', sans-serif;
+        text-align: center;
+        color: #fff;
+    }
+
+    .team-text {
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        margin: 20px;
+        color: #fff;
+    }
+
+    .team-block {
+        border: 0.5px solid #ffe559;
+        border-radius: 12px;
+        justify-content: space-between;
+        height: 180px;
+        width: 180px;
+    }
+
+    .team-member {
+        padding-top: 10px;
+        display: flex;
+
+        .right {
+            flex: 1;
+            align-self: center;
+            text-align: right;
+        }
+
+        .name {
+            font-size: 20px;
+            font-family: 'Lilita One', sans-serif;
+            color: #ffe559
+        }
+
+        .position {
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+            color: #fff
+        }
+    }
+
+    .team-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px 15px;
+        justify-content: center;
+    }
+
+    .final-section {
+
+        background-color: #b4b4b6;
+        padding-bottom: 60px;
+        padding-top: 40px;
+    }
+
+    .bubble-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .logo-bubble {
+        background-color: #ffe559;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .c-line {
+        color: #000;
+        text-align: center;
+        font-size: 12px;
+        margin-top: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px 15px;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .link {
+        color: black;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* BOOSTRAP MEDIA BREAKPOINTS */
+    /* Small devices (landscape phones, 576px and up) */
+
+    @media (max-width: 576px) {
+        .project-titles {
+            text-align: center;
+            padding: 0;
+        }
+
+        .title{ 
+            font-size: 49px;
+        }
+
+        .sub-title{
+          font-size: 45px;
+        }
+
+        .buy-button {
+            width: 300px;
+        }
+
+        .buy-button {
+            margin-bottom: 20px;
+        }
+
+        .right-wolf {
+            height: 280px;
+            margin-top: 40px;
+        }
+    }
+
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    @media (max-width: 768px) and (min-width: 577px) {
+        .project-titles {
+            text-align: center;
+            padding: 0;
+        }
+
+        .buy-button {
+            width: 300px;
+        }
+
+        .buy-button {
+            margin-bottom: 20px;
+        }
+
+        .right-wolf {
+            height: 320px;
+        }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+        .project-titles {
+            text-align: left;
+        }
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {}
+
+}

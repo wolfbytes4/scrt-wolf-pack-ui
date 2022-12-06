@@ -1,0 +1,20 @@
+@import 'bootstrap/scss/bootstrap';
+$bd-greyc: #3a3a3a;
+$bd-greyc-rgba: rgba(58,58,58,1);
+
+
+.btn-bd-primary {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #3a3a3a;
+    --bs-btn-border-color: #3a3a3a;
+    --bs-btn-border-radius: .5rem;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #{shade-color(#3a3a3a, 10%)};
+    --bs-btn-hover-border-color: #{shade-color(#3a3a3a, 10%)};
+    --bs-btn-focus-shadow-rgb: rgba(58,58,58,.8);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #{shade-color(#3a3a3a, 20%)};
+    --bs-btn-active-border-color: #{shade-color(#3a3a3a, 20%)};
+    
+  }

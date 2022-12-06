@@ -1,0 +1,179 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.root {
+  background-color: #3a3a3a;
+  height: 100%;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.master-container{
+  padding-top: 30px;
+}
+
+.button-row{
+  background-color: white;
+  height: 48px;
+  border-radius: 40px;
+  max-width: 500px;
+}
+
+.col{
+  align-self: center;
+}
+
+.header-col{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.connect-col{ 
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.white-circle{
+  height: 48px;
+  width: 48px;
+  background-color: white;
+  border-radius: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-circle img{
+  height: 45px;
+  width: 45px; 
+  border-radius: 48px;
+}
+
+.raffle-card{
+  width: 25rem;
+}
+
+.card-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.raffle-button{
+  display: flex !important;
+  height: 60px;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.time-text{
+  font-weight: 300;
+}
+
+.top-area{
+  height: 250px;
+  background-color: black;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-area img{
+  height: 200px;
+  width: 200px;
+}
+
+.info-row{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.card-text{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.text-label{
+  color: #7d7f7e;
+  font-weight: 700;
+}
+
+.text-content{
+  color: #3a3a3a;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.prize-pool-text{
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  color: #118C4F;
+  font-weight: 600;
+}
+
+.prize-text{ 
+  padding-bottom: 20px;
+  font-size: 14px;
+  color: #7d7f7e;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.card-title{
+  text-align: center;
+}
+
+.redeem{
+  justify-content: center;
+}
+
+.glow{
+  outline: none;
+  border: 1px solid #118C4F !important; 
+  box-shadow:0 0 20px #118C4F;
+}
+
+.wolf-img{
+  height: 100% !important;
+  width: 100% !important;
+  border-radius: 5px 5px 0 0;
+}
+
+.green{
+  color: #118C4F;
+}

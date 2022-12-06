@@ -1,0 +1,69 @@
+a {
+    text-decoration: none !important;
+    color: black !important;
+    cursor: pointer;
+}
+
+.nav-row {
+    width: 100%;
+    justify-content: end;
+}
+
+.mini-menu {
+    display: none;
+}
+
+.master-container {
+    width: 100% !important;
+    max-width: unset !important;
+    padding-left: 30px !important;
+
+}
+
+.navbar-toggler:focus {
+    box-shadow: unset !important;
+}
+
+.navbar-toggler {
+    margin-right: 50px;
+    border-color: #fff !important;
+    background-color: #b4b4b6 !important;
+}
+
+@media (max-width: 576px) {
+    .navbar-toggler {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (max-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .mini-menu {
+        display: contents;
+    }
+
+    .navbar-collapse {
+        height: 100vh;
+        width: 100vw;
+        background-color: #fff;
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        z-index: 2;
+    }
+
+    .nav-item {
+        font-size: 30px;
+        font-family: 'Lilita One', sans-serif;
+        margin-top: 20px;
+    }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
