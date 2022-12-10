@@ -7,6 +7,7 @@ import Home from "./components/home/home";
 import { SecretNetworkClient } from "secretjs";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Quests from "./components/quests/quests";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component {
   constructor() {
@@ -21,25 +22,21 @@ class App extends Component {
  
   render() { 
     const bgStyle = {
-      backgroundImage: `linear-gradient(rgba(58, 58, 58, 0.1), rgba(58, 58, 58, 1)), url(${banner})`,
-      width: "100%",
-      backgroundSize: "cover",
+      backgroundImage: `linear-gradient(rgba(58, 58, 58, .1) 0%, rgba(58, 58, 58, 1)70vh) , url(${banner})`,
+      width: "100%", 
       backgroundRepeat: "no-repeat",
-      backgroundPosition: "center center",
-      height: "500px",
-      position: "absolute"
+      backgroundPosition: "top center", 
+      height: "auto"
     };
     return (
-      <div className="root" style={bgStyle}>
-        <div className="content-area"> 
+      <div className="root" style={bgStyle}> 
         <Router>
         <Banner></Banner>
           <Routes> 
             <Route exact path='/' element={< Home />}></Route>
             <Route exact path="/quests" element={< Quests />} />
           </Routes>
-        </Router>
-        </div>
+        </Router> 
       </div>
     );
   }

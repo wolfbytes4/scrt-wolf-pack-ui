@@ -1,28 +1,27 @@
 import React, { Component } from "react";
 import "./header.scss";
 import { Link } from "react-router-dom";
-import wolf from "../../assets/shiller.png";
+import logo from "../../assets/logo.png";
 
 class Header extends Component {
   constructor(props) {
     super();
     this.state = {
-      address:""
+      address: "",
     };
   }
   componentDidMount = async () => {
-    await this.getAddress();
+    //await this.getAddress();
   };
   getAddress = async () => {
     const chainID = "secret-4";
     const offlineSigner = window.getOfflineSigner(chainID);
     const accounts = await offlineSigner.getAccounts();
     console.log(accounts);
-    this.setState({address:  accounts[0].address})
+    this.setState({ address: accounts[0].address });
   };
 
   scrollToComponent(tag) {
-    debugger;
     let id = tag ? tag : window.location.hash.replace("#", "");
     let element = document.getElementById(id);
 
@@ -39,7 +38,9 @@ class Header extends Component {
       <nav class="navbar navbar-expand-lg">
         <div className="container text-center master-container">
           <div className="navbar-brand white-circle">
-            <img src={wolf} />
+            <Link to="/">
+              <img src={logo} />
+            </Link>
           </div>
           <button
             class="navbar-toggler"
@@ -55,7 +56,7 @@ class Header extends Component {
           <span className="mini-menu">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                {/* <li class="nav-item">
                   <a
                     class="nav-link active"
                     aria-current="page"
@@ -66,8 +67,8 @@ class Header extends Component {
                   >
                     ABOUT
                   </a>
-                </li>
-                <li class="nav-item">
+                </li> */}
+                {/* <li class="nav-item">
                   <Link
                     to="/#roadmap"
                     onClick={(e) => this.scrollToComponent("roadmap")}
@@ -76,24 +77,49 @@ class Header extends Component {
                   >
                     ROADMAP
                   </Link>
-                </li>
+                </li> */}
+
                 <li class="nav-item">
-                  <Link
-                    to="/#team"
-                    onClick={(e) => this.scrollToComponent("team")}
-                    data-bs-toggle="collapse"
-                    data-bs-target=".navbar-collapse.show"
-                  >
-                    TEAM
+                  <Link to="/#about">
+                    <span
+                      data-bs-target="#navbarSupportedContent"
+                      data-bs-toggle="collapse"
+                      onClick={(e) => this.scrollToComponent("about")}
+                    >
+                      ABOUT
+                    </span>
                   </Link>
                 </li>
                 <li class="nav-item">
-                  <Link
-                    to="/quests"
-                    data-bs-toggle="collapse"
-                    data-bs-target=".navbar-collapse.show"
-                  >
-                    QUESTS
+                  <Link to="/#roadmap">
+                    <span
+                      data-bs-target="#navbarSupportedContent"
+                      data-bs-toggle="collapse"
+                      onClick={(e) => this.scrollToComponent("roadmap")}
+                    >
+                      ROADMAP
+                    </span>
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link to="/#team">
+                    <span
+                      data-bs-target="#navbarSupportedContent"
+                      data-bs-toggle="collapse"
+                      onClick={(e) => this.scrollToComponent("team")}
+                    >
+                      TEAM
+                    </span>
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link to="/quests">
+                    <span
+                      data-bs-target="#navbarSupportedContent"
+                      data-bs-toggle="collapse"
+                    >
+                      QUESTS
+                    </span>
                   </Link>
                 </li>
               </ul>
@@ -132,8 +158,24 @@ class Header extends Component {
               <div className="col col-2">
                 <div className="container text-center">
                   <div className="row button-row">
-                    {!s.address && <div onClick={(e) => this.getAddress()} className="col connect-col">Connect Wallet</div>}
-                    {s.address && <div className="col connect-col">{s.address.substring(0, 8)+'....'+s.address.substring(s.address.length-8, s.address.length)}</div>}
+                    {!s.address && (
+                      <div
+                        onClick={(e) => this.getAddress()}
+                        className="col connect-col"
+                      >
+                        Connect Wallet
+                      </div>
+                    )}
+                    {s.address && (
+                      <div className="col connect-col">
+                        {s.address.substring(0, 8) +
+                          "...." +
+                          s.address.substring(
+                            s.address.length - 8,
+                            s.address.length
+                          )}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

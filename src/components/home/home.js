@@ -1,19 +1,26 @@
 import React, { Component } from "react";
 import "./home.scss";
 import { Link } from "react-router-dom";
-import wolf from "../../assets/shiller.png";
+import wolf from "../../assets/wolfblankbg.png";
+import wolfFounder from "../../assets/wolf5.jpeg";
+import wolfOlarx from "../../assets/wolf1.jpeg";
+import wolfBigboss from "../../assets/wolf2.jpeg";
+import wolfChi from "../../assets/wolf3.jpeg";
+import wolfBytes from "../../assets/wolf7.jpeg";
 import twlogo from "../../assets/TwitterLogo.svg";
 import blackTwlogo from "../../assets/TwitterLogoDark.svg";
 import discordlogo from "../../assets/DiscordLogo.svg";
 import stashhlogo from "../../assets/StashhLogo.svg";
 
+
 class Home extends Component {
   constructor(props) {
     super();
     this.state = {};
-  } 
+  }
+   
 
-   scrollToComponent() { 
+  scrollToComponent() {
     let id = window.location.hash.replace("#", "");
     let element = document.getElementById(id);
 
@@ -21,13 +28,18 @@ class Home extends Component {
       if (element) {
         element.scrollIntoView()
       }
-    }, 200); 
-   }
+    }, 200);
+  }
+
+  componentDidMount() {
+    this.scrollToComponent();
+  }
+
   render() {
     return (
       <div id="home-component">
         <div className="container text-center master-container">
-          <div className="row">
+          <div className="row main-row">
             <div className="col col-lg-6 col-md-7 col-md-12 project-titles">
               <div className="title">SCRT WOLF PACK</div>
               <div className="sub-title">MINTING SOON</div>
@@ -35,7 +47,7 @@ class Home extends Component {
                 Buy on Stashh
               </a>
             </div>
-            <div className="col col-sm-12 col-md-12 col-lg-6">
+            <div className="col col-sm-12 col-md-12 col-lg-6 wolf-row">
               <div>
                 <img src={wolf} className="right-wolf" />
               </div>
@@ -119,7 +131,9 @@ class Home extends Component {
           </div>
           <div class="team-row">
             <div>
-              <div class="team-block"></div>
+              <div class="team-block">
+                <img src={wolfFounder} />
+              </div>
               <div className="team-member">
                 <div className="left">
                   <div className="name">JAX</div>
@@ -137,7 +151,8 @@ class Home extends Component {
               </div>
             </div>
             <div>
-              <div class="team-block"></div>
+              <div class="team-block">
+                <img src={wolfOlarx} /></div>
               <div className="team-member">
                 <div className="left">
                   <div className="name">OLARX</div>
@@ -155,7 +170,8 @@ class Home extends Component {
               </div>
             </div>
             <div>
-              <div class="team-block"></div>
+              <div class="team-block">
+                <img src={wolfBigboss} /></div>
               <div className="team-member">
                 <div className="left">
                   <div className="name">BIGBOSS</div>
@@ -173,7 +189,8 @@ class Home extends Component {
               </div>
             </div>
             <div>
-              <div class="team-block"></div>
+              <div class="team-block">
+                <img src={wolfChi} /></div>
               <div className="team-member">
                 <div className="left">
                   <div className="name">CHIEMERIE</div>
@@ -191,7 +208,8 @@ class Home extends Component {
               </div>
             </div>
             <div>
-              <div class="team-block"></div>
+              <div class="team-block">
+                <img src={wolfBytes} /></div>
               <div className="team-member">
                 <div className="left">
                   <div className="name">WOLFBYTES</div>
