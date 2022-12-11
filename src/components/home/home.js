@@ -85,7 +85,7 @@ class Home extends Component {
                   <div className="block-title">THE WOLFDAO</div>
                   <ul className="block-list">
                     <li>
-                      WolfPack Holders help decide future projects and
+                      Wolf Pack Holders help decide future projects and
                       initiatives.
                     </li>
                     <li>
@@ -126,7 +126,7 @@ class Home extends Component {
         <div id="team" className="team-section">
           <div className="team-title">Team</div>
           <div className="team-text">
-            Every member of the WolfPack is a valuable member of the team, here
+            Every member of the Wolf Pack is a valuable member of the team, here
             are a few key members..
           </div>
           <div class="team-row">
